@@ -100,6 +100,187 @@ tasks = [
 
      """,
      ["T", "t", "True", "true"]),
+
+    #Beverly
+    ("""There is only one ethnic group in Turkey
+     - True
+     - False
+
+
+
+     """,
+     ["T", "t", "True", "true"]),
+    
+    ("""Which of the following is NOT an ethnic group in Turkey?
+     A) Turks
+     B) Kurds
+     C) Armenians
+     D) Bantu
+
+     """,
+     ["D", "d"]),
+
+    ("""Which of the following is the largest ethnic group in Turkey?
+     A) Turks 
+     B) Kurds
+     C) Armenians
+     D) Bosniaks
+
+     """,
+     ["A", "a"]),
+
+    ("""What event started in 1915?
+     A) A war with a neighboring country
+     B) A genocide
+     C) A civil war
+     D) A large migration
+
+     """,
+     ["B", "b"]),
+
+    ("""Which people group was killed in the Genocide of 1915?
+     A) Turks
+     B) Kurds
+     C) Armenians
+     D) Albanians
+
+     """,
+     ["C", "c"]),
+
+    ("""Turks make up what percentage of the population?
+     A) 75.2%
+     B) 72.5%
+     C) 57.2%
+     D) 25.7%
+
+     """,
+     ["A", "a"]),
+
+    ("""Turks are predominantly believers in which of the following
+     religions?
+     A) Hinduism
+     B) Christianity
+     C) Islam
+     D) Buddhism
+     """,
+     ["C", "c"]),
+
+    ("""Kurds make up what percentage of the population?
+     A) 71.2%
+     B) 17.2%
+     C) 27.1%
+     D) 12.7%
+
+     """,
+     ["B", "b"]),
+
+    ("""In the 1930s, the Turkish government began a program to
+     forcefully "Turkify" which people group?
+     A) Kurds
+     B) Armenians
+     C) Bantu
+     D) Albanians
+     """,
+     ["A", "a"]),
+
+    ("""Armenians are predominantly believers in which of the
+     following religions?
+     A) Hinduism
+     B) Christianity
+     C) Islam
+     D) Buddhism
+     """,
+     ["B", "b"]),
+
+    #qwerty
+    ("""What is Turkey's government type?
+     A) Parliamentary republic
+     B) Presidential republic
+     C) Federal republic
+     D) Constitutional monarchy
+
+     """,
+     ["B", "b"]),
+
+    ("""What is the capital of Turkey?
+     A) İstanbul
+     B) İzmir
+     C) Ankara
+     D) Antalya
+
+     """,
+     ["C", "c"]),
+
+    ("""Turkey's constitution *explicitly* guarantees:
+     A) Freedom to eat, sleep, and study government structures
+     B) Freedom of movement, property, and worship
+     C) Freedom of expression, worship, conscience, and
+     proselytization
+     D) Freedom of party affiliation, voting, and none of the above
+
+     """,
+     ["B", "b"]),
+
+    ("""What are the three branches of the Turkish government?
+     A) Executive, monarchical, and judicial
+     B) Legislative, administrative, and federal
+     C) Executive, legislative, and judicial
+     D) Judicial, military, and advisory
+
+     """,
+     ["C", "c"]),
+
+    ("""Rank Turkey’s religions from most to least practiced:
+     A) Muslim, Christian, Hinduism, Other
+     B) Muslim, Christian, Jewish, Other
+     C) Christian, Muslim, Jewish, Other
+     D) Muslim, Jewish, Christian, Other
+
+     """,
+     ["B", "b"]),
+
+    ("""Turkey is a part of:
+     A) NATO only
+     B) EU only
+     C) Both NATO and EU
+     D) Neither NATO nor EU
+
+     """,
+     ["A", "a"]),
+
+    ("""A majority of Turkish people are satisfied with their
+     democracy government.
+     - True
+     - False
+     """,
+     ["F", "f", "False", "false"]),
+
+    ("""Turkey's official religion is Islam.
+     - True
+     - False
+
+
+
+     """,
+     ["F", "f", "False", "false"]),
+
+    ("""Turkey is facing high inflation.
+     - True
+     - False
+
+
+
+     """,
+     ["T", "t", "True", "true"]),
+
+    ("""Turkey is politically stable, and protests are rare.
+     - True
+     - False
+
+
+
+     """,
+     ["F", "f", "False", "false"]),
 ]
 
 def center_text(text, width):
