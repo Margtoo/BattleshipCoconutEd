@@ -11,9 +11,94 @@ row_labels = [chr(ord('A') + i) for i in range(grid_size)]
 col_labels = [str(i + 1) for i in range(grid_size)]
 
 # Q&A set; each question maps to a list of acceptable answers
-tasks = [
-    ("What is 2+2?", ["4", "four"]),
-    ("Name the capital of France.", ["Paris", "PARIS"]),
+#tasks = [
+#    ("What is 2+2?", ["4", "four"]),
+#    ("Name the capital of France.", ["Paris", "PARIS"]),
+    #Jane
+    
+#]
+
+    # Jane
+    ("""What should a good education system have?
+     A) School safety
+     B) Guide students with kindness, wisdom and strength
+     C) Equal educational opportunity
+     D) All above
+     
+     """,
+     ["D", "d"]),
+
+    ("""What rank is Turkey in education?
+     A) 12rd
+     B) 58rd
+     C) 43rd
+     D) 76rd
+     
+     """,
+     ["C", "c"]),
+
+    ("""How many years is compulsory education in Turkey?
+     A) 9 years
+     B) 6 years
+     C) 12 years
+     D) 16 years
+     
+     """,
+     ["C", "c"]),
+
+    ("""What are the top majors to Study in Turkey?
+     A) Humanities and Sciences
+     B) Health and Psychology
+     C) Business and Sciences
+     D) Psychology and Humanities
+     
+     """,
+     ["A", "a"]),
+
+    ("""Turkish society is generally class and authoritarian in nature.
+     Students are required from an early age to respect authority
+     and abide by laws.
+     - True
+     - False
+
+     """,
+     ["T", "t", "True", "true"]),
+
+    ("""Students in Turkey need to wear uniforms to school
+     and are expected to stand when answering questions.
+     - True
+     - False
+
+
+     """,
+     ["T", "t", "True", "true"]),
+
+    ("""Teacher turnover and shortages in Turkey have little impact
+     on student education instability.
+     - True
+     - False
+
+
+     """,
+     ["F", "f", "False", "false"]),
+
+    ("""Lack of basic facilities such as libraries and science laboratories
+     cannot be considered to affect the quality of education.
+     - True
+     - False
+
+
+     """,
+     ["F", "f", "False", "false"]),
+
+    ("""In Turkey, the economic crisis has had the most severe impact
+     on education.
+     - True
+     - False
+
+
+     """,
+     ["T", "t", "True", "true"]),
 ]
 
 def center_text(text, width):
@@ -169,10 +254,10 @@ def battle_phase(stdscr, p1, p2, g1, g2, qs):
                 skipped.clear()
             q_idx = random.choice(pool)
             q, ans_list = qs[q_idx]
-            stdscr.addstr(turn_row+1, 0, f"Q: {q}")
-            stdscr.addstr(turn_row+2, 0, "Answer (or 's' to skip): ")
+            stdscr.addstr(turn_row+1, 0, f"Q: {q}", curses.color_pair(4) | curses.A_BOLD)
+            stdscr.addstr(turn_row+8, 0, "Answer (or 's' to skip): ")
             stdscr.refresh(); curses.echo()
-            ans = stdscr.getstr(turn_row+2, len("Answer (or 's' to skip): "), 20).decode().strip()
+            ans = stdscr.getstr(turn_row+8, len("Answer (or 's' to skip): "), 20).decode().strip()
             curses.noecho()
 
             if ans.lower() == 's':
@@ -191,7 +276,7 @@ def battle_phase(stdscr, p1, p2, g1, g2, qs):
             if any(ans.lower() == a.lower() for a in ans_list):
                 pool.remove(q_idx)
                 # clear Q&A lines
-                for r in range(turn_row+1, turn_row+4): stdscr.move(r, 0); stdscr.clrtoeol()
+                for r in range(turn_row+1, turn_row+7): stdscr.move(r, 0); stdscr.clrtoeol()
                 stdscr.refresh()
                 break
             else:
@@ -230,6 +315,7 @@ def main(stdscr):
     curses.curs_set(0)
     curses.start_color(); curses.use_default_colors()
     curses.init_pair(1,curses.COLOR_CYAN,-1); curses.init_pair(2,curses.COLOR_RED,-1); curses.init_pair(3,curses.COLOR_BLUE,-1)
+    curses.init_pair(4, curses.COLOR_YELLOW, -1)
     p1 = get_name(stdscr,1); g1 = BattleshipGrid(); deploy_phase(stdscr,p1,g1)
     p2 = get_name(stdscr,2); g2 = BattleshipGrid(); deploy_phase(stdscr,p2,g2)
     battle_phase(stdscr,p1,p2,g1,g2,tasks)
