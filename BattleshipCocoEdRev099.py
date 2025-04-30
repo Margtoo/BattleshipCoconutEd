@@ -283,10 +283,10 @@ tasks = [
      ["F", "f", "False", "false"]),
 
     #Crum: Marriage
-        ("""How old do you have to be to get married in Turkey?
-     A) 16 years old
-     B) 17 years old
-     C) 18 years old
+    ("""How old do you have to be to get married in Turkey?
+    A) 16 years old
+    B) 17 years old
+    C) 18 years old
      D) 21 years old
 
      """,
@@ -374,6 +374,192 @@ tasks = [
      D) Sending the couple on a honeymoon
      """,
      ["A", "a"]),
+
+    #Lauren: Culture
+    ("""Which city is known as the cultural and historical center of Turkey,
+    A) Ankara
+    B) Antalya
+    C) Istanbul
+    D) Izmir
+
+    """,
+    ['C', 'c']),
+
+    ("""Which item is a common souvenir symbolizing protection and is
+    A) Horseshoe
+    B) Nazar Boncugu
+    C) Dreamcatcher
+    D) Red Ribbon
+
+    """,
+    ['B', 'b']),
+
+    ("""What is the traditional sweety also known as Lokum?
+    A)Turkish Delight
+    B)Gummy bear
+    C)Kit Kat
+    D)Sohan
+
+    """,
+    ['A', 'a']),
+
+    ("""What is the name of the popular Turkish meat dish cooked on a
+    A) Shawarma
+    B) Döner
+    C) Adana
+    D) BBQ
+
+    """,
+    ['B', 'b']),
+
+    ("""Which sea lies to the north of Turkey?
+    A) Aegean Sea
+    B) Mediterranean Sea
+    C) Black Sea
+    D) Marmara Sea
+
+    """,
+    ['C', 'c']),
+
+    ("""What is the name of the famous market in Istanbul known for its many
+    A) Spice Market
+    B) Grand Bazaar
+    C) Night Market
+    D) Sunday Market
+
+    """,
+    ['B', 'b']),
+
+    ("""Which ancient wonder was located in what is now Turkey?
+    A) Hanging Gardens of Babylon
+    B) Statue of Zeus
+    C) Temple of Artemis
+    D) Lighthouse of Alexandria
+
+    """,
+    ['C', 'c']),
+
+    ("""What type of dance is famous in Turkish spiritual tradition,
+    A) Ballet
+    B) Whirling dance
+    C) Belly dance
+    D) Modern dance
+
+    """,
+    ['B', 'b']),
+
+    ("""Which animal is considered sacred and well-loved in Turkish cities,
+    A) Dog
+    B) Cat
+    C) Cow
+    D) Rabbit
+
+    """,
+    ['B', 'b']),
+
+    ("""What is a common way Turkish people show hospitality to guests?
+    A) Giving flowers
+    B) Offering chocolate
+    C) Serving tea
+    D) Playing music
+
+    """,
+    ['C', 'c']),
+
+    #Tommy: Elderly
+    ("""There are a lot of old people in Turkey.
+    - True
+    - False
+
+
+
+    """,
+    ["T", "t", "True", "true"]),
+
+    ("""What is the average retirement age in Türkiye?
+    A) 45
+    B) 50
+    C) 60
+    D) 80
+
+    """,
+    ["C", "c"]),
+
+    ("""Many elderly people in Türkiye rely on government
+    pensions.
+    - True
+    - False
+
+
+
+    """,
+    ["T", "t", "True", "true"]),
+
+    ("""How many elderly people live in nursing homes in
+    Türkiye?
+    A) Lower than 1%
+    B) 5%
+    C) 10%
+    D) 20%
+
+    """,
+    ["A", "a"]),
+
+    ("""A lot of elderly people feel lonely.
+    - True
+    - False
+
+
+
+    """,
+    ["T", "t", "True", "true"]),
+
+    ("""What help does Turkey government give to elderly
+    people?
+    A) Free healthcare
+    B) Food suport
+    C) Transport discounts
+    D) All of them
+    """,
+    ["D", "d"]),
+
+    ("""Who takes care of the elderly people in Turkey?
+    A) Government
+    B) Community
+    C) Volunteers
+    D) Family
+
+    """,
+    ["D", "d"]),
+
+    ("""What is the average life expectancy for elderly
+    people in Turkey?
+    A) 66
+    B) 78
+    C) 85
+    D) 99
+    """,
+    ["B", "b"]),
+
+    ("""When is the “Respect for the Elderly Day” in Turkey?
+    A) Jan, 25
+    B) Feb. 14
+    C) Mar. 18
+    D) Apr. 1
+
+    """,
+    ["C", "c"]),
+
+    ("""Elderly people in Turkey have an extremely happy
+    life.
+    - True
+    - False
+
+
+    
+    """,
+    ["F", "f", "False", "false"]),
+    
 ]
 
 def center_text(text, width):
