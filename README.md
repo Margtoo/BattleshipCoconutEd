@@ -5,3 +5,5 @@ sorry if the whole gpt thing makes you uncomfortable! :(
 
 
 The screen size has to be at least **`77x25`** lines for the program to function normally
+
+Compiled using pyinstaller `--onefile` option
