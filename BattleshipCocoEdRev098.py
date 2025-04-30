@@ -19,7 +19,7 @@ col_labels = [str(i + 1) for i in range(grid_size)]
 #]
 
 tasks = [
-    # Jane
+    # Jane: Education
     ("""What should a good education system have?
      A) School safety
      B) Guide students with kindness, wisdom and strength
@@ -101,7 +101,7 @@ tasks = [
      """,
      ["T", "t", "True", "true"]),
 
-    #Beverly
+    #Beverly: Ethnic Groups
     ("""There is only one ethnic group in Turkey
      - True
      - False
@@ -192,7 +192,7 @@ tasks = [
      """,
      ["B", "b"]),
 
-    #qwerty
+    #qwerty: Government
     ("""What is Turkey's government type?
      A) Parliamentary republic
      B) Presidential republic
@@ -281,6 +281,99 @@ tasks = [
 
      """,
      ["F", "f", "False", "false"]),
+
+    #Crum: Marriage
+        ("""How old do you have to be to get married in Turkey?
+     A) 16 years old
+     B) 17 years old
+     C) 18 years old
+     D) 21 years old
+
+     """,
+     ["C", "c"]),
+
+    ("""Arranged marriages are no longer practiced in Turkey.
+     - True
+     - False
+
+
+
+     """,
+     ["F", "f", "False", "false"]),
+
+    ("""Who can perform a wedding in Turkey that is officially
+     recognized by law?
+     A) A civil official
+     B) Friend
+     C) Parents
+     D) Religious Leader
+     """,
+     ["A", "a"]),
+
+    ("""Which of the following is a common tradition in Turkish
+     weddings?
+     A) Wearing a green wedding dress
+     B) Exchanging vows in a church
+     C) The bride’s family hosting a henna night
+     D) The groom arriving on horseback
+     """,
+     ["C", "c"]),
+
+    ("""True or False: Polygamy is legal in Turkey.
+     - True
+     - False
+
+
+
+     """,
+     ["F", "f", "False", "false"]),
+
+    ("""What is the name of a traditional Turkish wedding dance where
+     guests pin money to the bride and groom's clothing?
+     A) Halay
+     B) Taki
+     C) Hor
+     D) Zeybek
+     """,
+     ["A", "a"]),
+
+    ("""True or False: Dowry is still a widespread and legally
+     enforced practice in Turkey.
+     - True
+     - False
+
+
+
+     """,
+     ["F", "f", "False", "false"]),
+
+    ("""True or False: Divorce rates in Turkey have slowly increased
+     over the past few decades.
+     - True
+     - False
+
+
+     
+     """,
+     ["T", "t", "True", "true"]),
+
+    ("""Which of the following factors has significantly influenced
+     the changes in marriage practices in Turkey?
+     A) Increased isolation
+     B) Decreased education for women
+     C) Strictly keeping old traditions
+     D) Urbanization and modernization
+     """,
+     ["D", "d"]),
+
+    ("""Which of the following is a common expectation for the groom’s
+     family in a traditional Turkish wedding?
+     A) Covering the major costs of the wedding ceremony
+     B) Providing the bride’s wedding dress
+     C) Arranging the couple’s new home
+     D) Sending the couple on a honeymoon
+     """,
+     ["A", "a"]),
 ]
 
 def center_text(text, width):
