@@ -266,10 +266,10 @@ def battle_phase(stdscr, p1, p2, g1, g2, qs):
             stdscr.move(turn_row+1, 0); stdscr.clrtoeol()
             stdscr.addstr(turn_row+1, 0, f"Q: {q}", curses.color_pair(4) | curses.A_BOLD)
             # 🔧 Clear and redraw input prompt
-            stdscr.move(turn_row+8, 0); stdscr.clrtoeol()
-            stdscr.addstr(turn_row+8, 0, "Answer (or 's' to skip): ")
+            stdscr.move(turn_row+9, 0); stdscr.clrtoeol()
+            stdscr.addstr(turn_row+9, 0, "Answer (or 's' to skip): ")
             stdscr.refresh(); curses.echo()
-            ans = stdscr.getstr(turn_row+8, len("Answer (or 's' to skip): "), 20).decode().strip()
+            ans = stdscr.getstr(turn_row+9, len("Answer (or 's' to skip): "), 20).decode().strip()
             curses.noecho()
 
             if ans.lower() == 's':
@@ -292,9 +292,9 @@ def battle_phase(stdscr, p1, p2, g1, g2, qs):
                 stdscr.refresh()
                 break
             else:
-                stdscr.addstr(turn_row+3, 0, "Wrong! Try again.")
+                stdscr.addstr(turn_row+8, 0, "Wrong! Try again.")
                 stdscr.refresh(); curses.napms(1000)
-                stdscr.move(turn_row+3, 0); stdscr.clrtoeol()
+                stdscr.move(turn_row+8, 0); stdscr.clrtoeol()
                 continue
 
         # Attack loop: must click valid cell
