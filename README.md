@@ -10,7 +10,7 @@ Compiled using pyinstaller `--onefile` option
 
 
 
-======
+---
 The Q&A formatter, unfortunately, is written by gpt as well lol.
 The input format is:
 
