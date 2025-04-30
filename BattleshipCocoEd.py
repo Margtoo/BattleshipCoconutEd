@@ -18,6 +18,7 @@ col_labels = [str(i + 1) for i in range(grid_size)]
     
 #]
 
+tasks = [
     # Jane
     ("""What should a good education system have?
      A) School safety
