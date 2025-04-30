@@ -246,16 +246,27 @@ def battle_phase(stdscr, p1, p2, g1, g2, qs):
             #continue
             #break
 
+        #moved out of the whiletrue
+        if not pool:
+            pool = list(range(len(qs)))
+            skipped.clear()
+        q_idx = random.choice(pool)
+        q, ans_list = qs[q_idx]
+        
         # Q&A loop: must answer correctly or skip (skip triggers reshuffle when pool empty)
         while True:
             # Ensure pool has questions, refill from full if empty
             stdscr.refresh()
-            if not pool:
-                pool = list(range(len(qs)))
-                skipped.clear()
-            q_idx = random.choice(pool)
-            q, ans_list = qs[q_idx]
+            #if not pool:
+            #    pool = list(range(len(qs)))
+            #    skipped.clear()
+            #q_idx = random.choice(pool)
+            #q, ans_list = qs[q_idx]
+            # 🔧 Clear and reprint question every time
+            stdscr.move(turn_row+1, 0); stdscr.clrtoeol()
             stdscr.addstr(turn_row+1, 0, f"Q: {q}", curses.color_pair(4) | curses.A_BOLD)
+            # 🔧 Clear and redraw input prompt
+            stdscr.move(turn_row+8, 0); stdscr.clrtoeol()
             stdscr.addstr(turn_row+8, 0, "Answer (or 's' to skip): ")
             stdscr.refresh(); curses.echo()
             ans = stdscr.getstr(turn_row+8, len("Answer (or 's' to skip): "), 20).decode().strip()
