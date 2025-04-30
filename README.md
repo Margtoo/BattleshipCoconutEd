@@ -24,4 +24,4 @@ Answer: real answer goes here\
 or,\
 \
 Question (1 line)\
-Answer: True (or false)\
+Answer: True (or false)
