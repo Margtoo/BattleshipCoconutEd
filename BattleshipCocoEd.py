@@ -11,9 +11,95 @@ row_labels = [chr(ord('A') + i) for i in range(grid_size)]
 col_labels = [str(i + 1) for i in range(grid_size)]
 
 # Q&A set; each question maps to a list of acceptable answers
+#tasks = [
+#    ("What is 2+2?", ["4", "four"]),
+#    ("Name the capital of France.", ["Paris", "PARIS"]),
+    #Jane
+    
+#]
+
 tasks = [
-    ("What is 2+2?", ["4", "four"]),
-    ("Name the capital of France.", ["Paris", "PARIS"]),
+    # Jane
+    ("""What should a good education system have?
+     A) School safety
+     B) Guide students with kindness, wisdom and strength
+     C) Equal educational opportunity
+     D) All above
+     
+     """,
+     ["D", "d"]),
+
+    ("""What rank is Turkey in education?
+     A) 12rd
+     B) 58rd
+     C) 43rd
+     D) 76rd
+     
+     """,
+     ["C", "c"]),
+
+    ("""How many years is compulsory education in Turkey?
+     A) 9 years
+     B) 6 years
+     C) 12 years
+     D) 16 years
+     
+     """,
+     ["C", "c"]),
+
+    ("""What are the top majors to Study in Turkey?
+     A) Humanities and Sciences
+     B) Health and Psychology
+     C) Business and Sciences
+     D) Psychology and Humanities
+     
+     """,
+     ["A", "a"]),
+
+    ("""Turkish society is generally class and authoritarian in nature.
+     Students are required from an early age to respect authority
+     and abide by laws.
+     - True
+     - False
+
+     """,
+     ["T", "t", "True", "true"]),
+
+    ("""Students in Turkey need to wear uniforms to school
+     and are expected to stand when answering questions.
+     - True
+     - False
+
+
+     """,
+     ["T", "t", "True", "true"]),
+
+    ("""Teacher turnover and shortages in Turkey have little impact
+     on student education instability.
+     - True
+     - False
+
+
+     """,
+     ["F", "f", "False", "false"]),
+
+    ("""Lack of basic facilities such as libraries and science laboratories
+     cannot be considered to affect the quality of education.
+     - True
+     - False
+
+
+     """,
+     ["F", "f", "False", "false"]),
+
+    ("""In Turkey, the economic crisis has had the most severe impact
+     on education.
+     - True
+     - False
+
+
+     """,
+     ["T", "t", "True", "true"]),
 ]
 
 def center_text(text, width):
@@ -104,7 +190,7 @@ def deploy_phase(stdscr, name, grid):
         stdscr.addstr(base, 0, "Press 'h'/'v' to change orientation.")
         stdscr.addstr(base+1, 0, f"Orientation: {'Horizontal' if direction=='H' else 'Vertical'}")
         stdscr.addstr(base+2, 0, f"Placing {ship_names[idx]} (size {ship_sizes[idx]})")
-        stdscr.addstr(base+3, 0, "Click a cell to place ship:")
+        stdscr.addstr(base+3, 0, "Click a cell to place ship :D")
         stdscr.refresh()
         key = stdscr.getch()
         if key == ord('h'):
@@ -160,19 +246,30 @@ def battle_phase(stdscr, p1, p2, g1, g2, qs):
             #continue
             #break
 
+        #moved out of the whiletrue
+        if not pool:
+            pool = list(range(len(qs)))
+            skipped.clear()
+        q_idx = random.choice(pool)
+        q, ans_list = qs[q_idx]
+        
         # Q&A loop: must answer correctly or skip (skip triggers reshuffle when pool empty)
         while True:
             # Ensure pool has questions, refill from full if empty
             stdscr.refresh()
-            if not pool:
-                pool = list(range(len(qs)))
-                skipped.clear()
-            q_idx = random.choice(pool)
-            q, ans_list = qs[q_idx]
-            stdscr.addstr(turn_row+1, 0, f"Q: {q}")
-            stdscr.addstr(turn_row+2, 0, "Answer (or 's' to skip): ")
+            #if not pool:
+            #    pool = list(range(len(qs)))
+            #    skipped.clear()
+            #q_idx = random.choice(pool)
+            #q, ans_list = qs[q_idx]
+            # 🔧 Clear and reprint question every time
+            stdscr.move(turn_row+1, 0); stdscr.clrtoeol()
+            stdscr.addstr(turn_row+1, 0, f"Q: {q}", curses.color_pair(4) | curses.A_BOLD)
+            # 🔧 Clear and redraw input prompt
+            stdscr.move(turn_row+9, 0); stdscr.clrtoeol()
+            stdscr.addstr(turn_row+9, 0, "Answer (or 's' to skip): ")
             stdscr.refresh(); curses.echo()
-            ans = stdscr.getstr(turn_row+2, len("Answer (or 's' to skip): "), 20).decode().strip()
+            ans = stdscr.getstr(turn_row+9, len("Answer (or 's' to skip): "), 20).decode().strip()
             curses.noecho()
 
             if ans.lower() == 's':
@@ -191,13 +288,13 @@ def battle_phase(stdscr, p1, p2, g1, g2, qs):
             if any(ans.lower() == a.lower() for a in ans_list):
                 pool.remove(q_idx)
                 # clear Q&A lines
-                for r in range(turn_row+1, turn_row+4): stdscr.move(r, 0); stdscr.clrtoeol()
+                for r in range(turn_row+1, turn_row+7): stdscr.move(r, 0); stdscr.clrtoeol()
                 stdscr.refresh()
                 break
             else:
-                stdscr.addstr(turn_row+3, 0, "Wrong! Try again.")
+                stdscr.addstr(turn_row+8, 0, "Wrong! Try again.")
                 stdscr.refresh(); curses.napms(1000)
-                stdscr.move(turn_row+3, 0); stdscr.clrtoeol()
+                stdscr.move(turn_row+8, 0); stdscr.clrtoeol()
                 continue
 
         # Attack loop: must click valid cell
@@ -230,6 +327,7 @@ def main(stdscr):
     curses.curs_set(0)
     curses.start_color(); curses.use_default_colors()
     curses.init_pair(1,curses.COLOR_CYAN,-1); curses.init_pair(2,curses.COLOR_RED,-1); curses.init_pair(3,curses.COLOR_BLUE,-1)
+    curses.init_pair(4, curses.COLOR_YELLOW, -1)
     p1 = get_name(stdscr,1); g1 = BattleshipGrid(); deploy_phase(stdscr,p1,g1)
     p2 = get_name(stdscr,2); g2 = BattleshipGrid(); deploy_phase(stdscr,p2,g2)
     battle_phase(stdscr,p1,p2,g1,g2,tasks)
