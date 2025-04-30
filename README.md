@@ -12,16 +12,16 @@ Compiled using pyinstaller `--onefile` option
 
 ---
 The Q&A formatter, unfortunately, is written by gpt as well lol.
-The input format is:
-
-Question (1 line)
-A) answer1
-B) answer2
-C) answer3
-D) answer4
-Answer: real answer goes here
-
-or,
-
-Question (1 line)
-Answer: True (or false)
+The input format is:\
+\
+Question (1 line)\
+A) answer1\
+B) answer2\
+C) answer3\
+D) answer4\
+Answer: real answer goes here\
+\
+or,\
+\
+Question (1 line)\
+Answer: True (or false)\
