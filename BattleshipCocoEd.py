@@ -190,7 +190,7 @@ def deploy_phase(stdscr, name, grid):
         stdscr.addstr(base, 0, "Press 'h'/'v' to change orientation.")
         stdscr.addstr(base+1, 0, f"Orientation: {'Horizontal' if direction=='H' else 'Vertical'}")
         stdscr.addstr(base+2, 0, f"Placing {ship_names[idx]} (size {ship_sizes[idx]})")
-        stdscr.addstr(base+3, 0, "Click a cell to place ship:")
+        stdscr.addstr(base+3, 0, "Click a cell to place ship :D")
         stdscr.refresh()
         key = stdscr.getch()
         if key == ord('h'):
