@@ -24,4 +24,8 @@ Answer: real answer goes here\
 or,\
 \
 Question (1 line)\
-Answer: True (or false)
+Answer: True (or false)\
+\
+\
+<img src="/img/Screen%20Shot%202025-05-01%20at%2010.12.24.png" alt="" width="500"/>\
+<img src="/img/Screen%20Shot%202025-05-01%20at%2010.11.34.png" alt="" width="500"/>
