@@ -3,6 +3,9 @@ import random
 import tkinter
 from tkinter import messagebox
 from qa_tasks import tasks  # imported Q&A module
+import os # lol classic of 09
+import re # for checking for numbers along with 09
+import time # stop, you're losing me
 
 # Constants
 grid_size = 10
@@ -258,6 +261,19 @@ def battle_phase(stdscr, p1, p2, g1, g2, qs):
 # main
 
 def main(stdscr):
+    while True:
+        siza = os.get_terminal_size()
+        numbers = re.findall(r'\d+', siza)
+        first_number = int(numbers[0])
+        second_number = int(numbers[1])
+        if first_number < 77:
+            print("Dude you need at least 77 columns wide")
+            time.sleep(1)
+        if second_number < 25:
+            print("Dude you need at least 25 lines tall")
+            time.sleep(1)
+    break
+    
     curses.curs_set(0)
     curses.start_color(); curses.use_default_colors()
     curses.init_pair(1,curses.COLOR_CYAN,-1); curses.init_pair(2,curses.COLOR_RED,-1); curses.init_pair(3,curses.COLOR_BLUE,-1)
