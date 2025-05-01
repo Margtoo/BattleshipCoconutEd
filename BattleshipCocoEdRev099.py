@@ -191,17 +191,24 @@ def battle_phase(stdscr, p1, p2, g1, g2, qs):
             ans = stdscr.getstr(turn_row+9, len("Answer (or 's' to skip): "), 20).decode().strip()
             curses.noecho()
 
+#            if ans.lower() == 's':
+#                # skip: move question to skipped list, then if pool empty, reshuffle
+#                pool.remove(q_idx)
+#                skipped.append(q_idx)
+#                if not pool:
+#                    pool = list(range(len(qs)))
+#                    skipped.clear()
+#                # clear Q&A lines
+#                stdscr.move(turn_row+1, 0); stdscr.clrtoeol()
+#                stdscr.move(turn_row+2, 0); stdscr.clrtoeol()
+#                continue
+            # fixed the problem of pressing s to crash
             if ans.lower() == 's':
-                # skip: move question to skipped list, then if pool empty, reshuffle
+            # only remove if it’s still in the pool
+            if q_idx in pool:
                 pool.remove(q_idx)
-                skipped.append(q_idx)
-                if not pool:
-                    pool = list(range(len(qs)))
-                    skipped.clear()
-                # clear Q&A lines
-                stdscr.move(turn_row+1, 0); stdscr.clrtoeol()
-                stdscr.move(turn_row+2, 0); stdscr.clrtoeol()
-                continue
+            # break out of the Q&A loop so we’ll pick a fresh question
+            break
 
             # Check answer against acceptable list
             if any(ans.lower() == a.lower() for a in ans_list):
