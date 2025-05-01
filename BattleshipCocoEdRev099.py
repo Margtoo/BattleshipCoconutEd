@@ -152,7 +152,7 @@ def battle_phase(stdscr, p1, p2, g1, g2, qs):
 
         # Turn info below stats
         turn_row = 4 + grid_size + 1
-        stdscr.addstr(turn_row, 0, f"Turn: {p1 if turn % 2 == 1 else p2}")
+        stdscr.addstr(turn_row, 0, f"Turn: {p1 if turn % 2 == 1 else p2}", curses.A_REVERSE)
         stdscr.refresh()
 
         # Check win condition
