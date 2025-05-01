@@ -272,7 +272,7 @@ def main(stdscr):
         if second_number < 25:
             print("Dude you need at least 25 lines tall")
             time.sleep(1)
-    break
+        break
     
     curses.curs_set(0)
     curses.start_color(); curses.use_default_colors()
