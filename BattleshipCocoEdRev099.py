@@ -207,8 +207,11 @@ def battle_phase(stdscr, p1, p2, g1, g2, qs):
                 # only remove if it’s still in the pool
                 if q_idx in pool:
                     pool.remove(q_idx)
-                # break out of the Q&A loop so we’ll pick a fresh question
-                break
+                # pick a brand‐new question
+                q_idx = random.choice(pool)
+                q, ans_list = qs[q_idx]
+                # re-display the new question
+                continue
 
             # Check answer against acceptable list
             if any(ans.lower() == a.lower() for a in ans_list):
