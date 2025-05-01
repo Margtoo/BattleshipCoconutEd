@@ -262,21 +262,19 @@ def battle_phase(stdscr, p1, p2, g1, g2, qs):
 
 def main(stdscr):
     while True:
-        size = os.get_terminal_size()
-        columns = size.columns
-        lines = size.lines
+        stdscr.clear()  # Clears the screen
+        size = stdscr.getmaxyx()
+        lines, columns = size
 
         if columns < 77:
-            print("Dude, you need at least 77 columns wide.")
-            time.sleep(1)
-            continue  # Go back to the start of the loop
+            stdscr.addstr(0, 0, "Make sure the terminal window is at least 77 characters wide")
+        elif lines < 25:
+            stdscr.addstr(0, 0, "Make sure the terminal window is at least 25 characters tall")
+        else:
+            break
 
-        if lines < 25:
-            print("Dude, you need at least 25 lines tall.")
-            time.sleep(1)
-            continue
-
-        break  # Only breaks if both size requirements are met
+        stdscr.refresh()
+        time.sleep(1)
     
     curses.curs_set(0)
     curses.start_color(); curses.use_default_colors()
