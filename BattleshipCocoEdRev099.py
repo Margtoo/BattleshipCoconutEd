@@ -262,7 +262,7 @@ def battle_phase(stdscr, p1, p2, g1, g2, qs):
 
 def main(stdscr):
     while True:
-        siza = os.get_terminal_size()
+        siza = int(os.get_terminal_size())
         numbers = re.findall(r'\d+', siza)
         first_number = int(numbers[0])
         second_number = int(numbers[1])
