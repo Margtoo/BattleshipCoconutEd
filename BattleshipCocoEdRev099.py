@@ -210,12 +210,12 @@ def battle_phase(stdscr, p1, p2, g1, g2, qs):
 
                 # 2) If that empties the pool, reset it to all question indices:
                 if not pool:
-                pool = list(range(len(qs)))
-                # pick a brand‐new question
-                q_idx = random.choice(pool)
-                q, ans_list = qs[q_idx]
-                # re-display the new question
-                continue
+                    pool = list(range(len(qs)))
+                    # pick a brand‐new question
+                    q_idx = random.choice(pool)
+                    q, ans_list = qs[q_idx]
+                    # re-display the new question
+                    continue
 
             # Check answer against acceptable list
             if any(ans.lower() == a.lower() for a in ans_list):
