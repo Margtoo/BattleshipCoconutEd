@@ -262,17 +262,21 @@ def battle_phase(stdscr, p1, p2, g1, g2, qs):
 
 def main(stdscr):
     while True:
-        siza = int(os.get_terminal_size())
-        numbers = re.findall(r'\d+', siza)
-        first_number = int(numbers[0])
-        second_number = int(numbers[1])
-        if first_number < 77:
-            print("Dude you need at least 77 columns wide")
+        size = os.get_terminal_size()
+        columns = size.columns
+        lines = size.lines
+
+        if columns < 77:
+            print("Dude, you need at least 77 columns wide.")
             time.sleep(1)
-        if second_number < 25:
-            print("Dude you need at least 25 lines tall")
+            continue  # Go back to the start of the loop
+
+        if lines < 25:
+            print("Dude, you need at least 25 lines tall.")
             time.sleep(1)
-        break
+            continue
+
+        break  # Only breaks if both size requirements are met
     
     curses.curs_set(0)
     curses.start_color(); curses.use_default_colors()
