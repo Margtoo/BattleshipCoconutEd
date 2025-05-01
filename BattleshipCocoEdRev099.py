@@ -207,6 +207,10 @@ def battle_phase(stdscr, p1, p2, g1, g2, qs):
                 # only remove if it’s still in the pool
                 if q_idx in pool:
                     pool.remove(q_idx)
+
+                # 2) If that empties the pool, reset it to all question indices:
+                if not pool:
+                pool = list(range(len(qs)))
                 # pick a brand‐new question
                 q_idx = random.choice(pool)
                 q, ans_list = qs[q_idx]
