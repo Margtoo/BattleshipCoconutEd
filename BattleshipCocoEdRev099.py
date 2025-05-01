@@ -204,11 +204,11 @@ def battle_phase(stdscr, p1, p2, g1, g2, qs):
 #                continue
             # fixed the problem of pressing s to crash
             if ans.lower() == 's':
-            # only remove if it’s still in the pool
-            if q_idx in pool:
-                pool.remove(q_idx)
-            # break out of the Q&A loop so we’ll pick a fresh question
-            break
+                # only remove if it’s still in the pool
+                if q_idx in pool:
+                    pool.remove(q_idx)
+                # break out of the Q&A loop so we’ll pick a fresh question
+                break
 
             # Check answer against acceptable list
             if any(ans.lower() == a.lower() for a in ans_list):
