@@ -7,359 +7,359 @@ This file defines the Q&A tasks for the Battleship quiz game.
 tasks = [
     # Jane: Education
     ("""What should a good education system have?
-     A) School safety
-     B) Guide students with kindness, wisdom and strength
-     C) Equal educational opportunity
-     D) All above
-     
-     """,
-     ["D", "d"]),
+    A) School safety
+    B) Guide students with kindness, wisdom and strength
+    C) Equal educational opportunity
+    D) All above
+    
+    """,
+    ["D", "d"]),
 
     ("""What rank is Turkey in education?
-     A) 12rd
-     B) 58rd
-     C) 43rd
-     D) 76rd
-     
-     """,
-     ["C", "c"]),
+    A) 12rd
+    B) 58rd
+    C) 43rd
+    D) 76rd
+    
+    """,
+    ["C", "c"]),
 
     ("""How many years is compulsory education in Turkey?
-     A) 9 years
-     B) 6 years
-     C) 12 years
-     D) 16 years
-     
-     """,
-     ["C", "c"]),
+    A) 9 years
+    B) 6 years
+    C) 12 years
+    D) 16 years
+    
+    """,
+    ["C", "c"]),
 
     ("""What are the top majors to Study in Turkey?
-     A) Humanities and Sciences
-     B) Health and Psychology
-     C) Business and Sciences
-     D) Psychology and Humanities
-     
-     """,
-     ["A", "a"]),
+    A) Humanities and Sciences
+    B) Health and Psychology
+    C) Business and Sciences
+    D) Psychology and Humanities
+    
+    """,
+    ["A", "a"]),
 
     ("""Turkish society is generally class and authoritarian in nature.
-     Students are required from an early age to respect authority
-     and abide by laws.
-     - True
-     - False
+    Students are required from an early age to respect authority
+    and abide by laws.
+    - True
+    - False
 
-     """,
-     ["T", "t", "True", "true"]),
+    """,
+    ["T", "t", "True", "true"]),
 
     ("""Students in Turkey need to wear uniforms to school
-     and are expected to stand when answering questions.
-     - True
-     - False
+    and are expected to stand when answering questions.
+    - True
+    - False
 
 
-     """,
-     ["T", "t", "True", "true"]),
+    """,
+    ["T", "t", "True", "true"]),
 
     ("""Teacher turnover and shortages in Turkey have little impact
-     on student education instability.
-     - True
-     - False
+    on student education instability.
+    - True
+    - False
 
 
-     """,
-     ["F", "f", "False", "false"]),
+    """,
+    ["F", "f", "False", "false"]),
 
     ("""Lack of basic facilities such as libraries and science laboratories
-     cannot be considered to affect the quality of education.
-     - True
-     - False
+    cannot be considered to affect the quality of education.
+    - True
+    - False
 
 
-     """,
-     ["F", "f", "False", "false"]),
+    """,
+    ["F", "f", "False", "false"]),
 
     ("""In Turkey, the economic crisis has had the most severe impact
-     on education.
-     - True
-     - False
+    on education.
+    - True
+    - False
 
 
-     """,
-     ["T", "t", "True", "true"]),
+    """,
+    ["T", "t", "True", "true"]),
 
     #Beverly: Ethnic Groups
     ("""There is only one ethnic group in Turkey
-     - True
-     - False
+    - True
+    - False
 
 
 
-     """,
-     ["T", "t", "True", "true"]),
+    """,
+    ["T", "t", "True", "true"]),
     
     ("""Which of the following is NOT an ethnic group in Turkey?
-     A) Turks
-     B) Kurds
-     C) Armenians
-     D) Bantu
+    A) Turks
+    B) Kurds
+    C) Armenians
+    D) Bantu
 
-     """,
-     ["D", "d"]),
+    """,
+    ["D", "d"]),
 
     ("""Which of the following is the largest ethnic group in Turkey?
-     A) Turks 
-     B) Kurds
-     C) Armenians
-     D) Bosniaks
+    A) Turks 
+    B) Kurds
+    C) Armenians
+    D) Bosniaks
 
-     """,
-     ["A", "a"]),
+    """,
+    ["A", "a"]),
 
     ("""What event started in 1915?
-     A) A war with a neighboring country
-     B) A genocide
-     C) A civil war
-     D) A large migration
+    A) A war with a neighboring country
+    B) A genocide
+    C) A civil war
+    D) A large migration
 
-     """,
-     ["B", "b"]),
+    """,
+    ["B", "b"]),
 
     ("""Which people group was killed in the Genocide of 1915?
-     A) Turks
-     B) Kurds
-     C) Armenians
-     D) Albanians
+    A) Turks
+    B) Kurds
+    C) Armenians
+    D) Albanians
 
-     """,
-     ["C", "c"]),
+    """,
+    ["C", "c"]),
 
     ("""Turks make up what percentage of the population?
-     A) 75.2%
-     B) 72.5%
-     C) 57.2%
-     D) 25.7%
+    A) 75.2%
+    B) 72.5%
+    C) 57.2%
+    D) 25.7%
 
-     """,
-     ["A", "a"]),
+    """,
+    ["A", "a"]),
 
     ("""Turks are predominantly believers in which of the following
-     religions?
-     A) Hinduism
-     B) Christianity
-     C) Islam
-     D) Buddhism
-     """,
-     ["C", "c"]),
+    religions?
+    A) Hinduism
+    B) Christianity
+    C) Islam
+    D) Buddhism
+    """,
+    ["C", "c"]),
 
     ("""Kurds make up what percentage of the population?
-     A) 71.2%
-     B) 17.2%
-     C) 27.1%
-     D) 12.7%
+    A) 71.2%
+    B) 17.2%
+    C) 27.1%
+    D) 12.7%
 
-     """,
-     ["B", "b"]),
+    """,
+    ["B", "b"]),
 
     ("""In the 1930s, the Turkish government began a program to
-     forcefully "Turkify" which people group?
-     A) Kurds
-     B) Armenians
-     C) Bantu
-     D) Albanians
-     """,
-     ["A", "a"]),
+    forcefully "Turkify" which people group?
+    A) Kurds
+    B) Armenians
+    C) Bantu
+    D) Albanians
+    """,
+    ["A", "a"]),
 
     ("""Armenians are predominantly believers in which of the
-     following religions?
-     A) Hinduism
-     B) Christianity
-     C) Islam
-     D) Buddhism
-     """,
-     ["B", "b"]),
+    following religions?
+    A) Hinduism
+    B) Christianity
+    C) Islam
+    D) Buddhism
+    """,
+    ["B", "b"]),
 
     #qwerty: Government
     ("""What is Turkey's government type?
-     A) Parliamentary republic
-     B) Presidential republic
-     C) Federal republic
-     D) Constitutional monarchy
+    A) Parliamentary republic
+    B) Presidential republic
+    C) Federal republic
+    D) Constitutional monarchy
 
-     """,
-     ["B", "b"]),
+    """,
+    ["B", "b"]),
 
     ("""What is the capital of Turkey?
-     A) İstanbul
-     B) İzmir
-     C) Ankara
-     D) Antalya
+    A) İstanbul
+    B) İzmir
+    C) Ankara
+    D) Antalya
 
-     """,
-     ["C", "c"]),
+    """,
+    ["C", "c"]),
 
     ("""Turkey's constitution *explicitly* guarantees:
-     A) Freedom to eat, sleep, and study government structures
-     B) Freedom of movement, property, and worship
-     C) Freedom of expression, worship, conscience, and
-     proselytization
-     D) Freedom of party affiliation, voting, and none of the above
+    A) Freedom to eat, sleep, and study government structures
+    B) Freedom of movement, property, and worship
+    C) Freedom of expression, worship, conscience, and
+    proselytization
+    D) Freedom of party affiliation, voting, and none of the above
 
-     """,
-     ["B", "b"]),
+    """,
+    ["B", "b"]),
 
     ("""What are the three branches of the Turkish government?
-     A) Executive, monarchical, and judicial
-     B) Legislative, administrative, and federal
-     C) Executive, legislative, and judicial
-     D) Judicial, military, and advisory
+    A) Executive, monarchical, and judicial
+    B) Legislative, administrative, and federal
+    C) Executive, legislative, and judicial
+    D) Judicial, military, and advisory
 
-     """,
-     ["C", "c"]),
+    """,
+    ["C", "c"]),
 
     ("""Rank Turkey’s religions from most to least practiced:
-     A) Muslim, Christian, Hinduism, Other
-     B) Muslim, Christian, Jewish, Other
-     C) Christian, Muslim, Jewish, Other
-     D) Muslim, Jewish, Christian, Other
+    A) Muslim, Christian, Hinduism, Other
+    B) Muslim, Christian, Jewish, Other
+    C) Christian, Muslim, Jewish, Other
+    D) Muslim, Jewish, Christian, Other
 
-     """,
-     ["B", "b"]),
+    """,
+    ["B", "b"]),
 
     ("""Turkey is a part of:
-     A) NATO only
-     B) EU only
-     C) Both NATO and EU
-     D) Neither NATO nor EU
+    A) NATO only
+    B) EU only
+    C) Both NATO and EU
+    D) Neither NATO nor EU
 
-     """,
-     ["A", "a"]),
+    """,
+    ["A", "a"]),
 
     ("""A majority of Turkish people are satisfied with their
-     democracy government.
-     - True
-     - False
-     """,
-     ["F", "f", "False", "false"]),
+    democracy government.
+    - True
+    - False
+    """,
+    ["F", "f", "False", "false"]),
 
     ("""Turkey's official religion is Islam.
-     - True
-     - False
+    - True
+    - False
 
 
 
-     """,
-     ["F", "f", "False", "false"]),
+    """,
+    ["F", "f", "False", "false"]),
 
     ("""Turkey is facing high inflation.
-     - True
-     - False
+    - True
+    - False
 
 
 
-     """,
-     ["T", "t", "True", "true"]),
+    """,
+    ["T", "t", "True", "true"]),
 
     ("""Turkey is politically stable, and protests are rare.
-     - True
-     - False
+    - True
+    - False
 
 
 
-     """,
-     ["F", "f", "False", "false"]),
+    """,
+    ["F", "f", "False", "false"]),
 
     #Crum: Marriage
     ("""How old do you have to be to get married in Turkey?
     A) 16 years old
     B) 17 years old
     C) 18 years old
-     D) 21 years old
+    D) 21 years old
 
-     """,
-     ["C", "c"]),
+    """,
+    ["C", "c"]),
 
     ("""Arranged marriages are no longer practiced in Turkey.
-     - True
-     - False
+    - True
+    - False
 
 
 
-     """,
-     ["F", "f", "False", "false"]),
+    """,
+    ["F", "f", "False", "false"]),
 
     ("""Who can perform a wedding in Turkey that is officially
-     recognized by law?
-     A) A civil official
-     B) Friend
-     C) Parents
-     D) Religious Leader
-     """,
-     ["A", "a"]),
+    recognized by law?
+    A) A civil official
+    B) Friend
+    C) Parents
+    D) Religious Leader
+    """,
+    ["A", "a"]),
 
     ("""Which of the following is a common tradition in Turkish
-     weddings?
-     A) Wearing a green wedding dress
-     B) Exchanging vows in a church
-     C) The bride’s family hosting a henna night
-     D) The groom arriving on horseback
-     """,
-     ["C", "c"]),
+    weddings?
+    A) Wearing a green wedding dress
+    B) Exchanging vows in a church
+    C) The bride’s family hosting a henna night
+    D) The groom arriving on horseback
+    """,
+    ["C", "c"]),
 
     ("""True or False: Polygamy is legal in Turkey.
-     - True
-     - False
+    - True
+    - False
 
 
 
-     """,
-     ["F", "f", "False", "false"]),
+    """,
+    ["F", "f", "False", "false"]),
 
     ("""What is the name of a traditional Turkish wedding dance where
-     guests pin money to the bride and groom's clothing?
-     A) Halay
-     B) Taki
-     C) Hor
-     D) Zeybek
-     """,
-     ["A", "a"]),
+    guests pin money to the bride and groom's clothing?
+    A) Halay
+    B) Taki
+    C) Hor
+    D) Zeybek
+    """,
+    ["A", "a"]),
 
     ("""True or False: Dowry is still a widespread and legally
-     enforced practice in Turkey.
-     - True
-     - False
+    enforced practice in Turkey.
+    - True
+    - False
 
 
 
-     """,
-     ["F", "f", "False", "false"]),
+    """,
+    ["F", "f", "False", "false"]),
 
     ("""True or False: Divorce rates in Turkey have slowly increased
-     over the past few decades.
-     - True
-     - False
+    over the past few decades.
+    - True
+    - False
 
 
-     
-     """,
-     ["T", "t", "True", "true"]),
+    
+    """,
+    ["T", "t", "True", "true"]),
 
     ("""Which of the following factors has significantly influenced
-     the changes in marriage practices in Turkey?
-     A) Increased isolation
-     B) Decreased education for women
-     C) Strictly keeping old traditions
-     D) Urbanization and modernization
-     """,
-     ["D", "d"]),
+    the changes in marriage practices in Turkey?
+    A) Increased isolation
+    B) Decreased education for women
+    C) Strictly keeping old traditions
+    D) Urbanization and modernization
+    """,
+    ["D", "d"]),
 
     ("""Which of the following is a common expectation for the groom’s
-     family in a traditional Turkish wedding?
-     A) Covering the major costs of the wedding ceremony
-     B) Providing the bride’s wedding dress
-     C) Arranging the couple’s new home
-     D) Sending the couple on a honeymoon
-     """,
-     ["A", "a"]),
+    family in a traditional Turkish wedding?
+    A) Covering the major costs of the wedding ceremony
+    B) Providing the bride’s wedding dress
+    C) Arranging the couple’s new home
+    D) Sending the couple on a honeymoon
+    """,
+    ["A", "a"]),
 
     #Lauren: Culture
     ("""Which city is known as the cultural and historical center of Turkey,
@@ -545,5 +545,86 @@ tasks = [
     
     """,
     ["F", "f", "False", "false"]),
+
+    #Vivian
+    ("""What do Turkish teenagers like to do in their free time?
+    A) Play football
+    B) Read books
+    C) Paint or draw
+    D) Learn coding
+
+    """,
+    ["A", "a"]),
+
+    ("""Is the English proficiency rate among Turkish teenagers
+    high or low?
+    A) High
+    B) Low
+
+
+    """,
+    ["B", "b"]),
+
+    ("""What is the completion rate of compulsory education
+    for Turkish teenagers?
+    A) 80% - 85%
+    B) 90% - 92%
+
+
+    """,
+    ["B", "b"]),
+
+    ("""How much time do Turkish teenagers spend online
+    every day? (rounded hours)
+
+
+
+
+    """,
+    ["4", "5", "6"]),
+
+    ("""What is the favorite sport among Turkish teenagers?
+    A) Frisbee
+    B) Basketball
+    C) Football
+    D) Soccer
+
+    """,
+    ["C", "c", "D", "d"]),
+
+    ("""How many hours of sleep do Turkish teenagers get on
+    average each day?
+
+
+
+
+    """,
+    ["6", "7", "8"]),
+
+    ("""What is the favorite food among Turkish teenagers?
+    A) BBQ & Hamburger
+    B) Döner & Turkish Delight
+    C) The Coffee Bean & Tea Leaf
+    D) Pizza & Avocado
+
+    """,
+    ["A", "a"]),
+
+    ("""Do Turkish teenagers prefer going to shopping malls
+    or doing outdoor activities?
+    A) Going to shopping malls
+    B) Doing outdoor activities
+
+
+    """,
+    ["A", "a"]),
+
+    ("""Which is more popular in Turkey?
+    A) E-sports
+    B) Traditional sports
+
+
     
+    """,
+    ["B", "b"]),
 ]
