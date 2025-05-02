@@ -546,7 +546,7 @@ tasks = [
     """,
     ["F", "f", "False", "false"]),
 
-    #Vivian
+    #Vivian: Teenagers
     ("""What do Turkish teenagers like to do in their free time?
     A) Play football
     B) Read books
@@ -627,4 +627,98 @@ tasks = [
     
     """,
     ["B", "b"]),
+
+    #Gabriella: Faith
+    ("""How many faiths are there in Turkey?
+    A) 3
+    B) 4
+    C) 5
+    D) More than 5
+
+    """,
+    ["D", "d"]),
+
+    ("""What percentage of Turkey's population are
+    Christians?
+    A) More than 2%
+    B) Less than 0.2%
+    C) Less than 5%
+    D) More than 2.5%
+    """,
+    ["B", "b"]),
+
+    ("""Islam began to rule Turkey in 1299?
+    - True
+    - False
+
+
+
+    """,
+    ["T", "t", "True", "true"]),
+
+    ("""In which city do most Jews in Turkey live?
+    A) Istanbul and Ankara
+    B) Ankara and Antalya
+    C) Antalya and Izmir
+    D) Izmir and Istanbul
+
+    """,
+    ["D", "d"]),
+
+    ("""In which city is the holy site of Islamic
+    mysticism (Sufism) located?
+    A) Istanbul
+    B) Izmir
+    C) Konya
+    D) Antalya
+    """,
+    ["C", "c"]),
+
+    ("""In which year was Hagia Sophia built?
+    A) 532
+    B) 537
+    C) 1519
+    D) 1453
+
+    """,
+    ["B", "b"]),
+
+    ("""What happened in Turkey in 1054?
+    A) Church split: Eastern Orthodox & Catholicism
+    B) Capital moved to Byzantium by Constantine
+    C) Byzantine Empire ruled Turkey
+    D) Orthodoxy became distinct from Catholicism
+
+    """,
+    ["A", "a"]),
+
+    ("""In which Turkish city is the headquarters of
+    the Greek Orthodox Church?
+    A) Antalya
+    B) Konya
+    C) Izmir
+    D) Istanbul
+    """,
+    ["D", "d"]),
+
+    ("""The three largest religions in Turkey are
+    Islam, Christianity, and Judaism.
+    - True
+    - False
+
+    
+    """,
+    ["T", "t", "True", "true"]),
+
+    ("""What’s the name of the place where Jews
+    worship today?
+    A) Church
+    B) Synagogue
+    C) A same house
+    D) Mosque
+    """,
+    ["B", "b"]),
+
+    #Jimmy: National Peace
+    
 ]
