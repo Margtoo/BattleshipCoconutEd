@@ -260,89 +260,64 @@ def battle_phase(stdscr, p1, p2, g1, g2, qs):
 
 
 # demo functions written by gpt because I think I might just suck at this afterall...
-def show_deployment_preview(screen):
+def preview_empty_deploy(win):
     """
-    Mockup of the deployment phase.
-    Exits as soon as you click anywhere.
+    Draws an empty deployment‐style grid (ships visible but none placed),
+    then returns on any mouse click.
     """
-    # initialize curses
+    # init curses
     curses.curs_set(0)
     curses.start_color(); curses.use_default_colors()
-    curses.init_pair(10, curses.COLOR_CYAN, -1)
-    curses.init_pair(11, curses.COLOR_RED, -1)
-    curses.init_pair(12, curses.COLOR_BLUE, -1)
-    curses.init_pair(13, curses.COLOR_YELLOW, -1)
+    curses.init_pair(1, curses.COLOR_CYAN, -1)
+    curses.init_pair(2, curses.COLOR_RED, -1)
+    curses.init_pair(3, curses.COLOR_BLUE, -1)
+    curses.init_pair(4, curses.COLOR_YELLOW, -1)
     curses.mousemask(curses.ALL_MOUSE_EVENTS)
 
-    # build a fresh preview grid and lay out ships along row 0,1,2...
-    preview_grid = BattleshipGrid()
-    for ship_index, ship_len in enumerate(ship_sizes):
-        _ok, _msg = preview_grid.place_ship(
-            ship_index,        # row
-            0,                 # col
-            ship_len,
-            'H',
-            ship_names[ship_index][0]
-        )
+    # empty grid
+    grid_preview = BattleshipGrid()
 
-    # render it
-    screen.clear()
-    preview_grid.draw(screen, "PREVIEW: Fleet Placement", offset_x=0, show_ships=True)
-    screen.addstr(2 + grid_size + 2, 0,
-                  ">> Click anywhere to dismiss preview <<")
-    screen.refresh()
+    # draw and wait for click
+    win.clear()
+    grid_preview.draw(win, "EMPTY DEPLOYMENT PREVIEW", offset_x=0, show_ships=True)
+    win.addstr(2 + grid_size + 2, 0, "Click anywhere to dismiss")
+    win.refresh()
 
-    # wait for any mouse click
     while True:
-        event = screen.getch()
-        if event == curses.KEY_MOUSE:
+        ch = win.getch()
+        if ch == curses.KEY_MOUSE:
             break
 
 
-def show_battle_preview(screen):
+def preview_empty_battle(win):
     """
-    Mockup of the battle phase.
-    Exits as soon as you click anywhere.
+    Draws an empty battle‐style grid (ships hidden),
+    then returns on any mouse click.
     """
-    # initialize curses
+    # init curses
     curses.curs_set(0)
     curses.start_color(); curses.use_default_colors()
-    curses.init_pair(20, curses.COLOR_CYAN, -1)
-    curses.init_pair(21, curses.COLOR_RED, -1)
-    curses.init_pair(22, curses.COLOR_BLUE, -1)
-    curses.init_pair(23, curses.COLOR_YELLOW, -1)
+    curses.init_pair(1, curses.COLOR_CYAN, -1)
+    curses.init_pair(2, curses.COLOR_RED, -1)
+    curses.init_pair(3, curses.COLOR_BLUE, -1)
+    curses.init_pair(4, curses.COLOR_YELLOW, -1)
     curses.mousemask(curses.ALL_MOUSE_EVENTS)
 
-    # build two preview boards and sprinkle a few hits/misses
-    import random
-    my_preview = BattleshipGrid()
-    enemy_preview = BattleshipGrid()
+    # empty grids
+    my_board = BattleshipGrid()
+    opp_board = BattleshipGrid()
 
-    for _ in range(12):
-        rx, ry = random.randrange(grid_size), random.randrange(grid_size)
-        my_preview.attacks[rx][ry] = random.choice(['X', 'O'])
-        sx, sy = random.randrange(grid_size), random.randrange(grid_size)
-        enemy_preview.attacks[sx][sy] = random.choice(['X', 'O'])
+    # draw side by side
+    win.clear()
+    left, right = 0, grid_size*3 + 10
+    my_board.draw(win, "EMPTY YOUR BOARD",   offset_x=left,  show_ships=False)
+    opp_board.draw(win, "EMPTY OPPONENT",    offset_x=right, show_ships=False)
+    win.addstr(4 + grid_size + 3, 0, "Click anywhere to dismiss")
+    win.refresh()
 
-    # draw them side by side
-    screen.clear()
-    left_offset, right_offset = 0, grid_size * 3 + 12
-    my_preview.draw(screen, "PREVIEW: Your Board", offset_x=left_offset, show_ships=False)
-    hits_a, misses_a = my_preview.stats()
-    screen.addstr(3 + grid_size + 1, left_offset, f"H:{hits_a}  M:{misses_a}")
-
-    enemy_preview.draw(screen, "PREVIEW: Opponent Board", offset_x=right_offset, show_ships=False)
-    hits_b, misses_b = enemy_preview.stats()
-    screen.addstr(3 + grid_size + 1, right_offset, f"H:{hits_b}  M:{misses_b}")
-
-    screen.addstr(4 + grid_size + 3, 0,
-                  ">> Click anywhere to dismiss preview <<")
-    screen.refresh()
-
-    # wait for any mouse click
     while True:
-        event = screen.getch()
-        if event == curses.KEY_MOUSE:
+        ch = win.getch()
+        if ch == curses.KEY_MOUSE:
             break
 
 
