@@ -279,11 +279,12 @@ def preview_empty_deploy(win):
 
     # draw and wait for click
     win.clear()
-    grid_preview.draw(win, "EMPTY DEPLOYMENT PREVIEW", offset_x=0, show_ships=True)
-    win.addstr(2 + grid_size + 2, 0, "Click anywhere to dismiss")
+    grid_preview.draw(win, "DEMO DEPLOYMENT SCREEN", offset_x=0, show_ships=True)
+    win.addstr(2 + grid_size + 2, 0, "DEMO DEPLOYMENT SCREEN")
     win.refresh()
 
     while True:
+        time.sleep(0.5)
         ch = win.getch()
         if ch == curses.KEY_MOUSE:
             break
@@ -310,13 +311,14 @@ def preview_empty_battle(win):
     # draw side by side
     win.clear()
     left, right = 0, grid_size*3 + 10
-    my_board.draw(win, "EMPTY YOUR BOARD",   offset_x=left,  show_ships=False)
-    opp_board.draw(win, "EMPTY OPPONENT",    offset_x=right, show_ships=False)
-    win.addstr(4 + grid_size + 3, 0, "Click anywhere to dismiss")
+    my_board.draw(win, "DEMO TEAM ONE",   offset_x=left,  show_ships=False)
+    opp_board.draw(win, "DEMO TEAM TWO",    offset_x=right, show_ships=False)
+    win.addstr(4 + grid_size + 3, 0, "DEMO BATTLE PHASE")
     win.refresh()
 
     while True:
         ch = win.getch()
+        time.sleep(0.5)
         if ch == curses.KEY_MOUSE:
             break
 
@@ -346,7 +348,7 @@ def main(stdscr):
     #deploy_phase(stdscr, "demo", grid)
     #battle_phase(stdscr,"Demo1","Demo2",g1,g2,tasks)
 
-    # here we go again...
+    # here we .... go again...
     preview_empty_deploy(stdscr)
     preview_empty_battle(stdscr)
     
