@@ -109,8 +109,8 @@ def deploy_phase(stdscr, name, grid):
         grid.draw(stdscr, f"{name}'s Deployment")
         stdscr.addstr(2+grid_size+1, 0, "Reference: " + ship_list)
         base = 3 + grid_size + 1
-        stdscr.addstr(base, 0, "Press 'h'/'v' to change orientation.")
-        stdscr.addstr(base+1, 0, f"Orientation: {'Horizontal' if direction=='H' else 'Vertical'}")
+        stdscr.addstr(base, 0, "Press 'h'/'v' on the keyboard to change ship orientation.")
+        stdscr.addstr(base+1, 0, f"Current Orientation: {'Horizontal' if direction=='H' else 'Vertical'}")
         stdscr.addstr(base+2, 0, f"Placing {ship_names[idx]} (size {ship_sizes[idx]})")
         stdscr.addstr(base+3, 0, "Click a cell to place ship :D")
         stdscr.refresh()
@@ -280,7 +280,12 @@ def preview_empty_deploy(win):
     # draw and wait for click
     win.clear()
     grid_preview.draw(win, "DEMO DEPLOYMENT SCREEN", offset_x=0, show_ships=True)
-    win.addstr(2 + grid_size + 2, 0, "DEMO DEPLOYMENT SCREEN")
+    win.addstr(2 + grid_size + 1, 0, "Reference: Carrier(5), Battleship(4), Cruiser(3), Submarine(3), Destroyer(2)")
+    win.addstr(2 + grid_size + 2, 0, "Press 'h'/'v' on the keyboard to change ship orientation.")
+    win.addstr(2 + grid_size + 3, 0, "Current Orientation: Horizontal")
+    win.addstr(2 + grid_size + 4, 0, "Placing Carrier (size 5)")
+    win.addstr(2 + grid_size + 5, 0, "Click a cell to place ship :D")
+    win.addstr(2 + grid_size + 7, 0, "-----DEMO DEPLOYMENT SCREEN-----")
     win.refresh()
 
     while True:
@@ -313,7 +318,11 @@ def preview_empty_battle(win):
     left, right = 0, grid_size*3 + 10
     my_board.draw(win, "DEMO TEAM ONE",   offset_x=left,  show_ships=False)
     opp_board.draw(win, "DEMO TEAM TWO",    offset_x=right, show_ships=False)
-    win.addstr(4 + grid_size + 3, 0, "DEMO BATTLE PHASE")
+    win.addstr(grid_size + 2, 0, "Hit.                                        Miss.")
+    win.addstr(grid_size + 4, 0, "Hits:0 Misses:0                             Hits:0 Misses:0")
+    win.addstr(grid_size + 5, 0, "Turn: DEAM TEAM ONE")
+    win.addstr(grid_size + 6, 0, "QUESTION")
+    win.addstr(4 + grid_size + 4, 0, "-----DEMO BATTLE PHASE-----")
     win.refresh()
 
     while True:
