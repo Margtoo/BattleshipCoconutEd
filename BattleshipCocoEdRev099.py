@@ -332,6 +332,38 @@ def preview_empty_battle(win):
             break
 
 
+# The welcome screen. yrwelcome
+def draw_centered(scr, text, y_frac=0.5, attr=0):
+    """
+    Draws `text` centered horizontally at a vertical position
+    that's `y_frac` down the screen (0.0=top, 1.0=bottom).
+    """
+    scr.clear()
+    h, w = scr.getmaxyx()
+    y = int(h * y_frac)
+    x = (w - len(text)) // 2
+    scr.addstr(y, x, text, attr)
+    scr.refresh()
+
+
+def welcome_screen(scr):
+    """
+    Shows a welcome in the exact center; dismisses on click.
+    """
+    curses.curs_set(0)
+    curses.mousemask(curses.ALL_MOUSE_EVENTS)
+
+    draw_centered(scr, "🥑🍅🥒🥗", y_frac=0.45, attr=curses.A_BOLD)
+    #draw_centered(scr, "Click anywhere to begin",   y_frac=0.55)
+
+    # wait for any mouse click
+    while True:
+        time.sleep(0.5)
+        ch = scr.getch()
+        if ch == curses.KEY_MOUSE:
+            break
+
+
 
 
 
