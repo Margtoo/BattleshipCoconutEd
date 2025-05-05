@@ -347,8 +347,8 @@ def main(stdscr):
     #battle_phase(stdscr,"Demo1","Demo2",g1,g2,tasks)
 
     # here we go again...
-    show_deployment_preview(stdscr)
-    show_battle_preview(stdscr)
+    preview_empty_deploy(stdscr)
+    preview_empty_battle(stdscr)
     
     curses.curs_set(0)
     curses.start_color(); curses.use_default_colors()
