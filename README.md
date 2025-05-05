@@ -13,21 +13,23 @@ Compiled using pyinstaller `--onefile` option
 
 
 ---
-The Q&A formatter, unfortunately, is written by gpt as well lol.
-The input format is:\
+~~The Q&A formatter, unfortunately, is written by gpt as well lol.~~
+~~The input format is:~~\
 \
-Question (1 line)\
-A) answer1\
-B) answer2\
-C) answer3\
-D) answer4\
-Answer: real answer goes here\
+~~Question (1 line)~~\~~
+~~A) answer1~~\
+~~B) answer2~~\
+~~C) answer3~~\
+~~D) answer4~~\
+~~Answer: real answer goes here~~\
 \
-or,\
+~~or,~~\
 \
-Question (1 line)\
-Answer: True (or false)\
-\
-\
+~~Question (1 line)~~\
+~~Answer: True (or false)~~\
+
+
+
+------------
 <img src="img/Screen%20Shot%202025-05-01%20at%2010.12.24.png" alt="" width="500"/>\
 <img src="img/Screen%20Shot%202025-05-01%20at%2010.11.34.png" alt="" width="500"/>
