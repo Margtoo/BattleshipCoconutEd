@@ -235,7 +235,7 @@ tasks = [
     ["A", "a"]),
 
     ("""A majority of Turkish people are satisfied with their
-    democracy government.
+    democratic government.
     - True
     - False
     """,
