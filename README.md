@@ -34,3 +34,7 @@ Compiled using pyinstaller `--onefile` option
 <img src="img/Screen size check.png" alt="" width="500"/>\
 <img src="img/Welcome.png" alt="" width="500"/>\
 <img src="img/BattleScreen.png" alt="" width="500"/>
+
+------------
+Not taking anything politically or anything that sort of stuff. Questions came up by people in the homeroom, and I have absolutely no responsibility in fact checking and stuff! I just write this thing for the homeroom!
+sorry for the terrible names I came up with these files lol
