@@ -275,8 +275,9 @@ def main(stdscr):
 
         stdscr.refresh()
         time.sleep(1)
-    deploy_phase(stdscr, "demo", grid)
-    battle_phase(stdscr,"Demo1","Demo2",g1,g2,tasks)
+    # below my stupid idea of do a demo screen.
+    #deploy_phase(stdscr, "demo", grid)
+    #battle_phase(stdscr,"Demo1","Demo2",g1,g2,tasks)
     
     curses.curs_set(0)
     curses.start_color(); curses.use_default_colors()
