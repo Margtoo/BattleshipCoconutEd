@@ -389,6 +389,9 @@ def main(stdscr):
     #deploy_phase(stdscr, "demo", grid)
     #battle_phase(stdscr,"Demo1","Demo2",g1,g2,tasks)
 
+    # avocado, tomato, cucumber salata
+    welcome_screen(stdscr)
+
     # here we .... go again...
     preview_empty_deploy(stdscr)
     preview_empty_battle(stdscr)
