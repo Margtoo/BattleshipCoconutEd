@@ -353,7 +353,9 @@ def welcome_screen(scr):
     curses.curs_set(0)
     curses.mousemask(curses.ALL_MOUSE_EVENTS)
 
+    draw_centered(scr, "🥥",   y_frac=-1)
     draw_centered(scr, "🥑🍅🥒🥗", y_frac=0.45, attr=curses.A_BOLD)
+    draw_centered(scr, "...cannot be eaten",   y_frac=1)
     #draw_centered(scr, "Click anywhere to begin",   y_frac=0.55)
 
     # wait for any mouse click
