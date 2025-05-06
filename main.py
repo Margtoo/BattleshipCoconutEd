@@ -338,7 +338,8 @@ def draw_centered(scr, text, y_frac=0.5, attr=0):
     Draws `text` centered horizontally at a vertical position
     that's `y_frac` down the screen (0.0=top, 1.0=bottom).
     """
-    scr.clear()
+    # moved this thing to the welcome_screen function because I totally do not wish to clear the whole screen. It can clear later when I finsihed drawing everything I want.
+    # scr.clear()
     h, w = scr.getmaxyx()
     y = int(h * y_frac)
     x = (w - len(text)) // 2
@@ -352,11 +353,13 @@ def welcome_screen(scr):
     """
     curses.curs_set(0)
     curses.mousemask(curses.ALL_MOUSE_EVENTS)
+    # below: just once sweetie!
+    scr.clear()
 
-    draw_centered(scr, "🥥",   y_frac=-1)
+    draw_centered(scr, "fun fact: coconut emoji becomes <0001f965> when you type it in Mac Terminal",   y_frac=0.35, attr=curses.A_BOLD)
     draw_centered(scr, "🥑🍅🥒🥗", y_frac=0.45, attr=curses.A_BOLD)
-    draw_centered(scr, "...cannot be eaten",   y_frac=1)
-    #draw_centered(scr, "Click anywhere to begin",   y_frac=0.55)
+    draw_centered(scr, "...cannot be eaten", y_frac=0.5, attr=curses.A_BOLD)
+    #draw_centered(scr, "Click anywhere to begin",   y_frac=0.95)
 
     # wait for any mouse click
     while True:
