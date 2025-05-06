@@ -720,5 +720,30 @@ tasks = [
     ["B", "b"]),
 
     #Jimmy: National Peace
+        ("""Which country is near Turkey?
+    A) Greece
+    B) China
+    C) Italy
+    D) Germany
+
+    """,
+    ["A", "a"]),
+
+    ("""Turkey breaks off diplomatic relations with Israel.
+    - True
+    - False
+
+
+
+    """,
+    ["T", "t", "True", "true"]),
+
+    ("""Which international organization does Turkey attend?
+    A) NATO
+    B) APEC
+    C) CIA
+    D) BRICKS
     
+    """,
+    ["A", "a"]),
 ]
