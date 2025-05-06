@@ -1,7 +1,7 @@
 import curses
 import random
-import tkinter
-from tkinter import messagebox
+# import tkinter
+# from tkinter import messagebox
 from qa_tasks import tasks  # imported Q&A module
 import os # lol classic of 09
 import re # for checking for numbers along with 09
@@ -158,13 +158,14 @@ def battle_phase(stdscr, p1, p2, g1, g2, qs):
         stdscr.addstr(turn_row, 0, f"Turn: {p1 if turn % 2 == 1 else p2}", curses.A_REVERSE)
         stdscr.refresh()
 
-        # Check win condition
+        # Check winning condition
         if h1 >= total or h2 >= total:
             winner = p2 if h1 >= total else p1
-            #stdscr.addstr(turn_row+2, 0, f"{winner} wins!")
-            tkinter.messagebox.showinfo("alert", f"{winner} Wins!")
+            stdscr.addstr(turn_row+3, 0, f"{winner} wins!")
+            #tkinter.messagebox.showinfo("alert", f"{winner} Wins!")
             #stdscr.addstr(turn_row+3, 0, "Press any key to exit.")
             stdscr.refresh() #; stdscr.getch()
+            curses.napms(10000)
             #continue
             #break
 
