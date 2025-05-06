@@ -1,5 +1,6 @@
 import curses
 import random
+import subprocess
 # import tkinter
 # from tkinter import messagebox
 from qa_tasks import tasks  # imported Q&A module
@@ -357,6 +358,10 @@ def welcome_screen(scr):
     # below: just once sweetie!
     scr.clear()
 
+    Print(subprocess.check_output(['arch'], text=True))
+    Print(subprocess.check_output(['uptime'], text=True))
+    Print(subprocess.check_output(['uname', '-a'], text=True))
+    
     draw_centered(scr, "fun fact: coconut emoji 🥥 becomes <0001f965> when you type it in Mac Terminal",   y_frac=0.35, attr=curses.A_BOLD)
     draw_centered(scr, "...but it works just fine on Linux",   y_frac=0.4, attr=curses.A_BOLD)
     draw_centered(scr, "🥑🍅🥒🥗", y_frac=0.5, attr=curses.A_BOLD)
