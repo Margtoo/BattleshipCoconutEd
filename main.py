@@ -356,7 +356,7 @@ def welcome_screen(scr):
     # below: just once sweetie!
     scr.clear()
 
-    draw_centered(scr, "fun fact: coconut emoji becomes <0001f965> when you type it in Mac Terminal",   y_frac=0.35, attr=curses.A_BOLD)
+    draw_centered(scr, "fun fact: coconut emoji 🥥 becomes <0001f965> when you type it in Mac Terminal",   y_frac=0.35, attr=curses.A_BOLD)
     draw_centered(scr, "🥑🍅🥒🥗", y_frac=0.45, attr=curses.A_BOLD)
     draw_centered(scr, "...cannot be eaten", y_frac=0.5, attr=curses.A_BOLD)
     #draw_centered(scr, "Click anywhere to begin",   y_frac=0.95)
